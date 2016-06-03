@@ -84,8 +84,8 @@ module Sprockets
   end
 
   append_path Babel::Transpiler.source_path
-  register_mime_type 'text/ecmascript-6', extensions: ['.js'], charset: :unicode
-  register_transformer 'text/ecmascript-6', 'application/javascript', ES6
-  register_preprocessor 'text/ecmascript-6', DirectiveProcessor
+  register_mime_type 'application/javascript', extensions: ['.js'], charset: :unicode
+  register_transformer 'application/javascript', 'application/javascript', ES6
+  register_preprocessor 'application/javascript', DirectiveProcessor
   register_engine '.js', ES6
 end
